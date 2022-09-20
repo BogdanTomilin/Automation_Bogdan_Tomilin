@@ -1,10 +1,12 @@
 package lecture9;
 
 import org.testng.annotations.*;
+import pageObject.baseObject.BaseTest;
 import pageObject.saucedemo.LoginPage;
+import testNgUtils.Listener;
 
-@Listeners
-public class Lecture9_3Test {
+@Listeners(Listener.class)
+public class Lecture9_3Test extends BaseTest {
 
     @Parameters({"url", })
     @BeforeMethod

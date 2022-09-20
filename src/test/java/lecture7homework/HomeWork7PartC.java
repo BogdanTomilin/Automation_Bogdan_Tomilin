@@ -18,6 +18,8 @@ public class HomeWork7PartC extends BaseTest {
                 .enterUsername("standard_user")
                 .enterPassword("secret_sauce")
                 .clickLogin();
+
+
     }
 
 //    @Test

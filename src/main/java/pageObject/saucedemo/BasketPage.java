@@ -35,7 +35,7 @@ public class BasketPage  extends BasePage {
         return (WebElement) this;
     }
 
-    public WebElement clickRemove() {
+    public  WebElement clickRemove() {
         click(removeBtn);
         return (WebElement) this;
     }
