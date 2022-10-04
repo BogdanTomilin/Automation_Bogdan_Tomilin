@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [lecture11homework]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="2" parallel="tests" name="My homework 11(failed)" verbose="0">
+    <classes>
+      <class name="lecture11homework.HomeWork11Test">
+        <methods>
+          <include name="stop"/>
+          <include name="login"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- lecture11homework.HomeWork11Test -->
+    </classes>
+  </test> <!-- My homework 11(failed) -->
+</suite> <!-- Failed suite [lecture11homework] -->

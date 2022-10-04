@@ -1,4 +1,4 @@
-package lecture9;
+package lecture8homework.lecture9;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

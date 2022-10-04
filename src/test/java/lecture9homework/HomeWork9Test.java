@@ -19,7 +19,7 @@ public class HomeWork9Test extends BaseTest {
 
     @Parameters({"url", })
     @BeforeMethod
-    public void preconditions(@Optional("https://www.google.com/") String url) {
+    public void preconditions(@Optional("https://www.saucedemo.com/") String url) {
         new LoginPage()
                 .open(url);
     }
@@ -80,7 +80,7 @@ public class HomeWork9Test extends BaseTest {
         }
     }
 
-    @Test (invocationCount = 5, threadPoolSize = 5)
+    @Test ( enabled = false, invocationCount = 5, threadPoolSize = 5)
     public void exercise2 () {
         new LoginPage()
                 .open()

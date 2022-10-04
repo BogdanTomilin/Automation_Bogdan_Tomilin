@@ -2,13 +2,15 @@ package pageObject.saucedemo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import pageObject.baseObject.BasePage;
+import pageObject.herokuapp.SortableDataTablesPage;
 
 public class LoginPage  extends BasePage {
 
     private final By username = By.id("user-name");
     private final By password = By.id("password");
-    private final By loginBtn = By.id("login-button");
+    private final By loginBtn = By.id("login-butto");
 
     public LoginPage open() {
         driver.get("https://www.saucedemo.com/");
@@ -35,8 +37,15 @@ public class LoginPage  extends BasePage {
         return this;
     }
 
+
     public LoginPage clickLogin() {
         click(loginBtn);
+        Assert.assertTrue(driver.findElement(loginBtn).isDisplayed());
+        return this;
+    }
+
+    public LoginPage checkTableIsDisplayed2() {
+        Assert.assertTrue(driver.findElement(loginBtn).isDisplayed());
         return this;
     }
 
