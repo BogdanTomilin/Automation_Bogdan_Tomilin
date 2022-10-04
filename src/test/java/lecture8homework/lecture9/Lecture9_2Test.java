@@ -11,7 +11,7 @@ public class Lecture9_2Test {
     int count = 1;
     int timeout = 4;
 
-    @Test(enabled = false, priority = 1)
+    @Test(priority = 1)
     public void test1() {
         System.out.println("Hello i'am test 1");
     }
