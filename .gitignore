@@ -1,0 +1,6 @@
+/.idea
+.*iml
+/allure-report
+/allure-results
+/logs
+/build

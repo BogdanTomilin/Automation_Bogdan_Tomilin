@@ -3,6 +3,8 @@ package pageObject.herokuapp;
 public enum NavigationItems {
     DYNAMIC_LOADING("Dynamic Loading"),
     INFINITE_SCROLL("Infinite Scroll"),
+
+    DROPDOWN("Dropdown"),
     CONTEXT_MENU("Context Menu"),
     FRAMES("Frames"),
 

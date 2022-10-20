@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageObject.baseObject.BasePage;
 
-import static driver.SimpleDriver.getWebDriver;
+import static driver.DriverManager.getDriver;
 
 public class ProductPage extends BasePage {
 
     private final By title = By.xpath("//span[@class='title']");
 
     private WebElement getElementProduct(String productName) {
-        return getWebDriver().findElement(By.xpath("//*[@class = 'inventory_item_name' and text() = '" + productName + "']//ancestor::div[@class='inventory_item']"));
+        return getDriver().findElement(By.xpath("//*[@class = 'inventory_item_name' and text() = '" + productName + "']//ancestor::div[@class='inventory_item']"));
     }
 
     private WebElement getProductPrice(String productName) {
@@ -28,16 +28,19 @@ public class ProductPage extends BasePage {
         verifyPageUri();
     }
 
-    public void verifyPageUri() {
-        Assert.assertTrue(getWebDriver().getCurrentUrl().contains("inventory.html"));
+    public ProductPage verifyPageUri() {
+        Assert.assertTrue(getDriver().getCurrentUrl().contains("inventory.html"));
+        return this;
     }
 
-    public void verifyPageTitle() {
+    public ProductPage verifyPageTitle() {
         Assert.assertEquals(getText(title), "PRODUCTS");
+        return this;
     }
 
-    public void addProductToBasket(String productName) {
+    public ProductPage addProductToBasket(String productName) {
         click(getAddToCartBtn(productName));
+        return this;
     }
 
     public String getProductCost(String productName) {

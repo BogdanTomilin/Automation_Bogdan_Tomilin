@@ -13,12 +13,12 @@ public class LoginPage  extends BasePage {
     private final By loginBtn = By.id("login-butto");
 
     public LoginPage open() {
-        driver.get("https://www.saucedemo.com/");
+        load();
         return this;
     }
 
     public LoginPage open(String url) {
-        driver.get(url);
+        load(url);
         return this;
     }
 
@@ -32,8 +32,20 @@ public class LoginPage  extends BasePage {
         return this;
     }
 
+
+    public LoginPage enterUsername() {
+        enter(this.username, properties.getProperty("username"));
+        return this;
+    }
+
+    public LoginPage enterPassword() {
+        enter(this.password,  properties.getProperty("password"));
+        return this;
+    }
+
+
     public LoginPage verifyThatLoginPageIsClosed(){
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(loginBtn));
+        Assert.assertTrue(elementNotExist(loginBtn));
         return this;
     }
 
