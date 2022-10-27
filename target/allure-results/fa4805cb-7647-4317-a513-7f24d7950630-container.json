@@ -1,0 +1,1 @@
+{"uuid":"fa4805cb-7647-4317-a513-7f24d7950630","name":"Automation_Bogdan_Tomilin","children":["d740ec21-d062-4440-96a0-9f44f3b59232"],"befores":[{"name":"preconditions","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1666855247131,"stop":1666855254284}],"afters":[],"start":1666855246818,"stop":1666855254760}
