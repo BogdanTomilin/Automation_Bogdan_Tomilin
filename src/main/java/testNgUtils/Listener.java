@@ -1,5 +1,6 @@
 package testNgUtils;
 
+import lombok.SneakyThrows;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,6 +14,7 @@ import static driver.SimpleDriver.getWebDriver;
 
 public class Listener implements ITestListener {
 
+    @SneakyThrows
     @Override
     public void onStart(ITestContext context) {
         // <условие> ? <если условие = true> : <если условие = false>

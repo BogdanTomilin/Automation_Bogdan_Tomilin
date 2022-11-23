@@ -74,5 +74,6 @@ public class Lecture2 {
             throw new RuntimeException(e);
         }
     }
+
 }
 
